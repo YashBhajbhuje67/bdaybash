@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Counter = () => {
+const Counter = ({ setCountDownDone }) => {
   const [count, setCount] = useState(10);
   const nav = useNavigate();
 
@@ -14,6 +14,7 @@ const Counter = () => {
 
     if (count === 0) {
       clearInterval(intervalId);
+      setCountDownDone(true);
       nav("/giftbox");
     }
 

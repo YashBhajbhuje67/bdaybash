@@ -2,7 +2,9 @@ import React from 'react'
 
 const FinalPage = () => {
   return (
-    <div>FinalPage</div>
+    <div>
+      <div>Happy Birth Day</div>
+    </div>
   )
 }
 
