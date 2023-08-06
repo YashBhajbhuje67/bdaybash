@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Counter = ({ setCountDownDone }) => {
@@ -15,7 +15,7 @@ const Counter = ({ setCountDownDone }) => {
     if (count === 0) {
       clearInterval(intervalId);
       setCountDownDone(true);
-      nav("/giftbox");
+      nav('/giftbox');
     }
 
     return () => {
@@ -24,11 +24,10 @@ const Counter = ({ setCountDownDone }) => {
   }, [count]);
 
   return (
-    <div className="flex gap-4 text-3xl border rounded-md w-fit p-4 px-6 absolute top-[45%] left-[45%] ">
-        <div>{count}</div>
-        <div>Seconds</div>
+    <div className="flex items-center justify-center w-24 h-24 bg-blue-500 rounded-full text-white text-3xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg">
+      <div>{count}</div>
     </div>
   );
-}
+};
 
-export default Counter
+export default Counter;
